@@ -1,0 +1,39 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Dev dependencies (we install cleanly in builder stage)
+vendor
+node_modules
+
+# Local environment files (not needed in image — injected via docker-compose env)
+.env
+.env.*
+!.env.example
+
+# Local database files
+database/database.sqlite
+
+# Build artifacts
+public/build
+public/hot
+
+# Dev tooling
+.editorconfig
+.phpunit.cache
+phpunit.xml
+.phpunit.result.cache
+
+# Local logs & test output
+storage/logs
+k6/results
+
+# Documentation
+docs
+benchmarks.md
+README.md
+
+# Docker configs themselves
+docker-compose*.yml
+Dockerfile
