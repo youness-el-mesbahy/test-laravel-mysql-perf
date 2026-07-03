@@ -21,6 +21,10 @@ echo "Database is online!"
 echo "Running migrations..."
 php artisan migrate --force
 
+# Discover packages (regenerates packages.php without dev-only providers)
+echo "Discovering packages..."
+php artisan package:discover --ansi
+
 # Optimize Laravel configurations
 echo "Caching configurations..."
 php artisan config:cache
